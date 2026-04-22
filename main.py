@@ -3,8 +3,15 @@ import matplotlib.pyplot as plt
 
 print("Début de l'analyse des ventes...")
 
-# 1. On lit le fichier qu'on vient de créer
-df = pd.read_csv('ventes.csv')
+# 1. Lecture dynamique du fichier CSV
+fichier_cible = input("📂 Quel fichier CSV voulez-vous analyser ? (ex: ventes.csv) : ")
+
+try:
+    df = pd.read_csv(fichier_cible)
+    print(f"✅ Fichier '{fichier_cible}' chargé avec succès !")
+except FileNotFoundError:
+    print(f"❌ Erreur : Le fichier '{fichier_cible}' est introuvable. Vérifiez le nom.")
+    exit() # On arrête l'exécution proprement
 
 # 2. Calculez le Chiffre d'Affaires Brut (Prix * Quantité)
 # Pandas multiplie les deux colonnes ligne par ligne automatiquement
