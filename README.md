@@ -1,4 +1,4 @@
-# 📊 Automatisation des Ventes - PFA Logiciels
+# 📊 Automatisation des Ventes 
 
 ## 🎯 Contexte du Projet
 Ce script Python a été développé pour automatiser l'analyse des ventes d'une entreprise de e-commerce, résolvant ainsi la problématique du volume de données qui devient trop important pour un tableur classique.
